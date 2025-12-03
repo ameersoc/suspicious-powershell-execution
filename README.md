@@ -60,92 +60,75 @@ After the incident fired, I performed a full SOC-style investigation:
     * Included Invoke-WebRequest with URL
     * Used ExecutionPolicy Bypass
   
-✔ Deep-Dive Investigation
+**Deep-Dive Investigation**
 
-Using Defender for Endpoint and Log Analytics:
-
-Reviewed process execution chain
-
-Confirmed that the downloaded script was not executed
-
-Checked for:
-
-Persistence mechanisms
-
-Lateral movement
-
-Additional downloads
-
-New processes spawned
-
-Registry changes
+* Using Defender for Endpoint and Log Analytics:
+* Reviewed process execution chain
+* Confirmed that the downloaded script was not executed
+* Checked for:
+   * Persistence mechanisms
+   * Lateral movement
+   * Additional downloads
+   * New processes spawned
+   * Registry changes
 
 No additional malicious activity was detected.
 
-4️⃣ MITRE ATT&CK Mapping
+**4) MITRE ATT&CK Mapping**
+
 Tactic	Technique	Description
 Execution	T1059.001 – PowerShell	Suspicious PowerShell command execution
 Command & Control	T1105 – Ingress Tool Transfer	Downloading remote script using web request
 Execution	T1059 – Command and Scripting Interpreter	Script-based execution
-5️⃣ Containment – Isolating the Compromised Machine
+
+**5) Containment – Isolating the Compromised Machine**
 
 To prevent any further malicious activity:
 
-✔ Isolated the VM using Microsoft Defender for Endpoint
+* Isolated the VM using Microsoft Defender for Endpoint
 
 This action:
+* Blocks all inbound/outbound communication
+* Keeps only secure channels active
+* Prevents lateral movement or remote control
+* Isolation successfully contained the threat.
 
-Blocks all inbound/outbound communication
+**6) Final Outcome**
 
-Keeps only secure channels active
-
-Prevents lateral movement or remote control
-
-Isolation successfully contained the threat.
-
-6️⃣ Final Outcome
-✔ Detection Rule Worked as Intended
+* Detection Rule Worked as Intended
 
 The custom Sentinel rule accurately identified the suspicious PowerShell behavior.
 
-✔ Incident Response Completed End-to-End
+* Incident Response Completed End-to-End
 
 From initial detection to investigation to containment.
 
-✔ Environment Left Fully Secured
+* Environment Left Fully Secured
 
 No malicious execution occurred beyond the test download.
 
-🔎 Key Skills Demonstrated
-Detection Engineering
+**Key Skills Demonstrated**
 
-Custom KQL query development
-
-Scheduled analytics rule creation
-
-Entity mapping in Sentinel
-
-Threat Hunting & Investigation
-
-Process chain analysis in Defender
-
-Log Analytics workspace investigation
-
-MITRE ATT&CK mapping
-
-Incident Response & Containment
-
-Incident assignment and triage
+* Detection Engineering
+* Custom KQL query development
+* Scheduled analytics rule creation
+* Entity mapping in Sentinel
+* Threat Hunting & Investigation
+* Process chain analysis in Defender
+* Log Analytics workspace investigation
+* MITRE ATT&CK mapping
+* Incident Response & Containment
+* Incident assignment and triage
 
 Evidence collection
 
 Endpoint isolation using EDR
 
-📂 Final Notes (Portfolio Highlight)
+**Final Notes (Portfolio Highlight)**
 
 This project showcases my ability to:
-✔ Build custom detection rules
-✔ Simulate realistic threat behavior
-✔ Perform hands-on SOC investigations
-✔ Apply MITRE ATT&CK techniques
-✔ Contain threats using enterprise EDR tooling
+* Build custom detection rules
+* Simulate realistic threat behavior
+* Perform hands-on SOC investigations
+* Apply MITRE ATT&CK techniques
+* Contain threats using enterprise EDR tooling
