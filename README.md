@@ -62,7 +62,11 @@ After the incident fired, I performed a full SOC-style investigation:
   
 **Deep-Dive Investigation**
 
-* Using Defender for Endpoint and Log Analytics:
+Using Defender for Endpoint and Log Analytics:
+
+<img width="1000" height="400" alt="Investigation " src="https://github.com/user-attachments/assets/a7f6587c-b321-4aa0-b36d-190f26db0085" />
+
+
 * Reviewed process execution chain
 * Confirmed that the downloaded script was not executed
 * Checked for:
@@ -86,6 +90,9 @@ Execution	T1059 – Command and Scripting Interpreter	Script-based execution
 To prevent any further malicious activity:
 
 * Isolated the VM using Microsoft Defender for Endpoint
+
+<img width="1000" height="400" alt="Screen Shot 2025-12-03 at 4 52 16 pm" src="https://github.com/user-attachments/assets/d7034cde-107e-4c92-915e-134618884b56" />
+
 
 This action:
 * Blocks all inbound/outbound communication
