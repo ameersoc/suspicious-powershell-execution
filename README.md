@@ -49,17 +49,17 @@ Observed Behavior
 After the incident fired, I performed a full SOC-style investigation:
 
 * Assigned Incident to Myself
-* Changed incident status to Active and began triage.
+
+  Changed incident status to Active and began triage.
+  
 * Verified Affected Assets
     * Device: win-ameer-projec
     * User Account: ameer
 
 * Suspicious Command Executed:
-
-* Included Invoke-WebRequest with URL
-
-* Used ExecutionPolicy Bypass
-
+    * Included Invoke-WebRequest with URL
+    * Used ExecutionPolicy Bypass
+  
 ✔ Deep-Dive Investigation
 
 Using Defender for Endpoint and Log Analytics:
